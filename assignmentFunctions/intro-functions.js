@@ -116,7 +116,7 @@ console.assert(rovarspraket(0) === "0")
  */
 
 function reverse(str){
-    // YOUR CODE HERE
+    return str = str.split("").reverse().join("");
 }
 
 console.assert(reverse("books") === "skoob")
@@ -132,7 +132,18 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  */
 
 function findLongestWord(sentence){
-    // YOUR CODE HERE
+    sentence = sentence.split(" ");
+    var a = sentence[0];
+    var b;
+    for(var i = 0; i < sentence.length; i++) {
+    	if(sentence[i].length > a.length) {
+      	a = sentence[i];
+      } else {
+      	b = sentence[i+1];
+      }
+    }
+    return a;
+}
 }
 
 console.assert(findLongestWord("book dogs") === "book")
