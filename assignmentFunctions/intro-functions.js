@@ -144,7 +144,7 @@ function findLongestWord(sentence){
     }
     return a;
 }
-}
+
 
 console.assert(findLongestWord("book dogs") === "book")
 console.assert(findLongestWord("don't mess with Texas") === "Texas")
