@@ -20,7 +20,7 @@ console.log(twoPlusTwo);
 // Challenge 1
 // in one line of js, subsitute "naps" for "maps"
 var tweeter = "I really like maps";
-tweeter = "I really like naps";
+tweeter.replace("maps", "naps");
 
 
 // Challenge 2
@@ -75,6 +75,12 @@ console.assert( isPalindrome("cowboy") === false )
 
 function letterCount(word){
 	var letters = {};
+	if(!str){
+		return letters;
+	}
+	str = str.toLowerCase();
+
+	str = str.replace(/\W+/g, "")
 
 	for (var i = 0; i < word.length; i += 1) {
 		if (letters[word[i]]) {
